@@ -1,0 +1,23 @@
+<body>
+    <section class="list">
+        <h1>TODO List</h1>
+        <h2>A place to store your todos</h2>
+        <input type="text" class="filter" name="filter" value="Filter your to-dos">
+        <div>
+            <ol>
+                <li *ngFor="let do of todo; index as i">
+                    <span [ngClass]="{complete: do.complete }"><button type="button" class="completeButton"
+                            *ngIf="!do.complete">Complete </button>
+                        {{do.task}}</span>
+                    <i class="fas fa-times"></i>
+                </li>
+
+            </ol>
+        </div>
+        <input type="text" class="add" name="add" value="Add your to-do">
+
+        <button type="button" id="add">Add</button>
+
+    </section>
+
+</body>
